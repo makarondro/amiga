@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Santa Amiga — EN через ES</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section id="onboardingTip" class="card calavera-frame onboarding hidden">
+        <h2>Швидкий старт</h2>
+        <p>1) Натисни “Наступне слово” → 2) Познач “Знаю/Не знаю” → 3) Пройди 3 питання в квізі.</p>
+        <button id="closeOnboardingBtn" class="btn">Зрозуміло</button>
+      </section>
+
+      <header class="header calavera-frame">
+        <p class="kicker">Santa Amiga</p>
+        <h1>Вивчай English через Español</h1>
+        <p class="subtitle">Для мами: просто, спокійно, щодня по трошки</p>
+      </header>
+
+      <section class="card mascot calavera-frame" aria-live="polite">
+        <div class="mascot-top">
+          <div class="mascot-avatar" aria-hidden="true">💀🌹</div>
+          <div>
+            <h2>Санта Аміґа — твоя помічниця</h2>
+            <p class="muted">Я знаю, що ти знаєш іспанську, а рідна — українська. Буду пояснювати EN через ES.</p>
+          </div>
+        </div>
+        <p id="mascotHint" class="mascot-hint"></p>
+      </section>
+
+      <section class="card panel calavera-frame">
+        <h2>Слово дня</h2>
+        <div id="wordCard" class="word-card"></div>
+        <p id="wordStatus" class="word-status">Статус: new</p>
+        <div class="status-actions">
+          <button id="markKnownBtn" class="btn btn-secondary">✅ Знаю</button>
+          <button id="markLearningBtn" class="btn btn-ghost">🧠 Не знаю</button>
+        </div>
+        <button id="nextWordBtn" class="btn">Наступне слово</button>
+      </section>
+
+      <section class="card panel calavera-frame">
+        <h2>Міні-квіз</h2>
+        <div class="quiz-mode">
+          <button id="modeEsToEnBtn" class="btn btn-ghost btn-small">ES → EN</button>
+          <button id="modeEnToEsBtn" class="btn btn-ghost btn-small">EN → ES</button>
+        </div>
+        <p id="quizPrompt" class="quiz-prompt"></p>
+        <input id="quizInput" class="input" type="text" placeholder="Введи англійське слово" />
+        <button id="checkBtn" class="btn">Перевірити</button>
+        <p id="quizResult" class="quiz-result"></p>
+      </section>
+
+      <section class="card panel calavera-frame">
+        <h2>Мій прогрес</h2>
+        <div class="progress-grid">
+          <div class="progress-item">
+            <p class="progress-label">new</p>
+            <p id="countNew" class="progress-value">0</p>
+          </div>
+          <div class="progress-item">
+            <p class="progress-label">learning</p>
+            <p id="countLearning" class="progress-value">0</p>
+          </div>
+          <div class="progress-item">
+            <p class="progress-label">known</p>
+            <p id="countKnown" class="progress-value">0</p>
+          </div>
+        </div>
+        <p id="knownPercent" class="known-percent">% known: 0%</p>
+        <p id="streakCount" class="known-percent">Streak: 0 днів</p>
+      </section>
+
+      <section class="card panel calavera-frame">
+        <h2>Що робимо прямо зараз</h2>
+        <ol>
+          <li>Запускаємо локально.</li>
+          <li>Додаємо 10 своїх слів.</li>
+          <li>Користуємось щодня 5 хв.</li>
+        </ol>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

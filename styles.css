@@ -1,0 +1,279 @@
+:root {
+  --bg: #1b0b1f;
+  --bg-soft: #2a1030;
+  --card: #2b1433;
+  --text: #f7e9ff;
+  --muted: #d8b4e2;
+  --accent: #f472b6;
+  --accent-2: #22d3ee;
+  --ok: #34d399;
+  --danger: #fb7185;
+  --border: #6b214f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 10% 20%, #5b123a 0%, transparent 35%),
+    radial-gradient(circle at 90% 10%, #3b0764 0%, transparent 30%),
+    linear-gradient(180deg, #0b0612, var(--bg));
+}
+
+.app {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 16px;
+  display: grid;
+  gap: 12px;
+}
+
+.hidden {
+  display: none;
+}
+
+.onboarding h2 {
+  margin: 0 0 8px;
+}
+
+.onboarding p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.kicker {
+  margin: 0 0 4px;
+  color: var(--accent-2);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  line-height: 1.2;
+}
+
+.subtitle {
+  margin-top: 8px;
+  color: var(--muted);
+}
+
+.card {
+  background: linear-gradient(180deg, var(--card), var(--bg-soft));
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.mascot-top {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 10px;
+  align-items: center;
+}
+
+.mascot-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+  background: linear-gradient(135deg, #7e225a, #4c1d95);
+  border: 1px solid #d946ef;
+}
+
+.mascot h2 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.muted {
+  color: var(--muted);
+  margin: 6px 0 0;
+  font-size: 0.93rem;
+}
+
+.mascot-hint {
+  margin: 10px 0 0;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(13, 6, 20, 0.45);
+  border: 1px dashed #c026d3;
+}
+
+.calavera-frame {
+  position: relative;
+}
+
+.calavera-frame::before,
+.calavera-frame::after {
+  content: "✦";
+  position: absolute;
+  top: 8px;
+  color: var(--accent);
+  opacity: 0.85;
+}
+
+.calavera-frame::before {
+  left: 10px;
+}
+
+.calavera-frame::after {
+  right: 10px;
+}
+
+.word-card {
+  margin: 12px 0;
+  padding: 10px;
+  border: 1px dashed #a21caf;
+  border-radius: 12px;
+  background: rgba(13, 6, 20, 0.35);
+}
+
+.word-card p {
+  margin: 6px 0;
+}
+
+.btn,
+.input {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #7e225a;
+  padding: 10px 12px;
+  font-size: 1rem;
+}
+
+.btn {
+  margin-top: 8px;
+  background: linear-gradient(90deg, var(--accent), #ec4899);
+  color: #2a0824;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.status-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.btn-secondary {
+  background: linear-gradient(90deg, #34d399, #10b981);
+  color: #06221a;
+}
+
+.btn-ghost {
+  background: #2f1539;
+  color: var(--text);
+}
+
+.btn-small {
+  padding: 8px 10px;
+  font-size: 0.9rem;
+}
+
+.btn-active {
+  background: linear-gradient(90deg, #22d3ee, #06b6d4);
+  color: #042025;
+  border-color: #06b6d4;
+}
+
+.word-status {
+  margin: 0 0 6px;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.quiz-mode {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.progress-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.progress-item {
+  border: 1px dashed #a21caf;
+  border-radius: 12px;
+  padding: 10px;
+  background: rgba(13, 6, 20, 0.35);
+  text-align: center;
+}
+
+.progress-label {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.progress-value {
+  margin: 6px 0 0;
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.known-percent {
+  margin: 10px 0 0;
+  color: var(--accent-2);
+  font-weight: 700;
+  text-align: center;
+}
+
+.input {
+  margin-top: 8px;
+  background: #14091b;
+  color: var(--text);
+}
+
+.quiz-result.ok {
+  color: var(--ok);
+}
+
+.quiz-result.bad {
+  color: var(--danger);
+}
+
+.quiz-result.celebrate {
+  animation: pop 280ms ease-out 1;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.96);
+    opacity: 0.7;
+  }
+  60% {
+    transform: scale(1.06);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .app {
+    padding: 24px;
+    gap: 16px;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+}
